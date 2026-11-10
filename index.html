@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research by Eman | مراجعة البحوث والتحكيم والتحليل الإحصائي</title>
+<meta name="description" content="مراجعة البحوث والرسائل بمعايير التحكيم، والتحكيم العلمي، والتحليل الإحصائي، وبناء المقاييس، والمراجعات المنهجية، والمراجع والمصادر، وتقارير الاستلال والذكاء الاصطناعي، وتصميم المنصات التفاعلية.">
+<meta property="og:title" content="Research by Eman">
+<meta property="og:description" content="مراجعة بحثية بمعايير التحكيم، قبل أن يراها المحكّمون.">
+<meta property="og:image" content="https://raddadieman-creator.github.io/research-by-emanGhadah/assets/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#46406F">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#46406F; --indigo-2:#5A5390; --teal:#2FA98C; --teal-ink:#1F7D67; --rose:#C95F7E; --rose-soft:#F6DCE4;
+  --ink:#221E3F; --ink-2:#4F4B68; --muted:#6E6A86; --paper:#F6F6F9; --sheet:#FFFFFF; --line:#DCDAE6; --line-2:#ECEAF2;
+  --sans:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,sans-serif;
+  --display:"Noto Naskh Arabic","IBM Plex Serif",serif;
+  --wrap:1180px; --r:14px;
+  color-scheme:light;
+}
+html.l-en{ --sans:"IBM Plex Sans","IBM Plex Sans Arabic",system-ui,sans-serif; --display:"IBM Plex Serif","Noto Naskh Arabic",serif }
+html.l-en .ar, html:not(.l-en) .en{display:none !important}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.75 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html.l-en body{line-height:1.65}
+img{max-width:100%;display:block}
+a{color:var(--indigo)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);color:var(--ink);margin:0;font-weight:700;line-height:1.35}
+html.l-en h1,html.l-en h2,html.l-en h3{font-weight:600;line-height:1.2}
+h2{font-size:clamp(28px,3.4vw,40px)}
+h3{font-size:21px}
+p{margin:0}
+.lead{font-size:19px;color:var(--ink-2);max-width:62ch}
+.num{font-variant-numeric:tabular-nums;font-family:"IBM Plex Sans",var(--sans)}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:50}
+.skip:focus{top:12px}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(246,246,249,.88);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);direction:ltr;flex-shrink:0}
+.brand svg{width:34px;height:34px}
+.brand b{font:600 19px/1 "IBM Plex Serif",serif;letter-spacing:-.01em}
+.brand b i{font-style:italic;color:var(--indigo-2);font-weight:500}
+.nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:15.5px;padding:8px 12px;border-radius:8px}
+.nav a:hover{color:var(--ink);background:var(--line-2)}
+.actions{display:flex;align-items:center;gap:10px}
+.lang{border:1px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:999px;height:38px;min-width:46px;padding:0 14px;font:600 14px/1 "IBM Plex Sans",var(--sans);cursor:pointer}
+.lang:hover{border-color:var(--indigo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;height:48px;padding:0 24px;font:600 16px/1 var(--sans);text-decoration:none;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s}
+.btn svg{width:19px;height:19px;flex-shrink:0}
+.btn-primary{background:var(--indigo);color:#fff;box-shadow:0 8px 20px -10px rgba(70,64,111,.7)}
+.btn-primary:hover{background:var(--ink);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--indigo);background:var(--sheet)}
+.btn-sm{height:38px;padding:0 16px;font-size:14.5px}
+.menu-btn{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--line);background:var(--sheet);cursor:pointer;align-items:center;justify-content:center}
+.menu-btn svg{width:22px;height:22px}
+
+/* hero */
+.hero{padding:56px 0 88px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(34px,4.3vw,54px);line-height:1.3;letter-spacing:-.005em}
+html.l-en .hero h1{font-size:clamp(36px,4.8vw,60px);line-height:1.08;letter-spacing:-.02em}
+.hero h1 span{display:block;color:var(--indigo-2)}
+.hero .lead{margin-top:22px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.promise{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-2);font-size:15px}
+.promise span{display:flex;align-items:center;gap:8px}
+.promise svg{width:18px;height:18px;color:var(--teal)}
+
+/* manuscript */
+.desk{position:relative;padding:18px 0 18px}
+.sheet{position:relative;background:var(--sheet);border-radius:6px;box-shadow:0 1px 0 var(--line),0 30px 60px -30px rgba(34,30,63,.35),0 10px 24px -16px rgba(34,30,63,.2);padding:34px 36px 30px;margin-inline-end:180px;font-family:var(--display)}
+.sheet::before{content:"";position:absolute;inset:10px -10px -10px 10px;background:#ECEBF3;border-radius:6px;z-index:-1;transform:rotate(-1.4deg)}
+html[dir=rtl] .sheet::before{inset:10px 10px -10px -10px;transform:rotate(1.4deg)}
+.ms-run{display:flex;justify-content:space-between;font:500 12px/1 var(--sans);color:var(--muted);border-bottom:1px solid var(--line-2);padding-bottom:12px;margin-bottom:18px}
+.ms-title{font-size:20px;line-height:1.55;font-weight:700;color:var(--ink)}
+html.l-en .ms-title{font-size:19px;line-height:1.35}
+.ms-h{font-size:15.5px;font-weight:700;color:var(--indigo);margin:18px 0 6px}
+.ms-p{font-size:15.5px;line-height:2.05;color:#3B3757}
+html.l-en .ms-p{line-height:1.8;font-family:"IBM Plex Serif",serif}
+.mark{background-image:linear-gradient(var(--rose-soft),var(--rose-soft));background-repeat:no-repeat;background-size:0% 100%;background-position:right;transition:background-size .9s cubic-bezier(.6,.1,.2,1);border-radius:3px;padding:2px 0;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+html.l-en .mark{background-position:left}
+.on .mark{background-size:100% 100%}
+.alpha{position:relative;white-space:nowrap;direction:ltr;unicode-bidi:isolate;border-radius:4px;padding:0 3px;transition:box-shadow .4s,background .4s}
+.on-a .alpha{background:#E3F4EF;box-shadow:inset 0 -2px 0 var(--teal)}
+.ghost-lines{margin-top:14px;display:grid;gap:11px}
+.ghost-lines i{display:block;height:8px;border-radius:4px;background:var(--line-2)}
+.ghost-lines i:nth-child(1){width:96%}.ghost-lines i:nth-child(2){width:88%}.ghost-lines i:nth-child(3){width:64%}
+
+.note{position:absolute;inset-inline-end:-200px;width:192px;background:var(--sheet);border-radius:10px;padding:12px 14px 13px;font:400 13.5px/1.7 var(--sans);color:var(--ink-2);box-shadow:0 14px 30px -18px rgba(34,30,63,.45);border:1px solid var(--line);opacity:0;transform:translateX(-14px);transition:opacity .5s,transform .5s cubic-bezier(.2,.8,.2,1)}
+html[dir=rtl] .note{transform:translateX(14px)}
+.note b{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;margin-bottom:4px}
+.note b::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.note.n1{top:300px;border-inline-start:3px solid var(--rose)} .note.n1 b{color:var(--rose)}
+.note.n2{top:180px;border-inline-start:3px solid var(--teal)} .note.n2 b{color:var(--teal-ink)}
+.note::after{content:"";position:absolute;top:22px;inset-inline-end:100%;width:30px;border-top:1.5px dashed currentColor;color:var(--line)}
+.on-1 .n1,.on-2 .n2{opacity:1;transform:none}
+
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;margin-inline-end:180px}
+.meter{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-family:var(--sans)}
+.meter .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13.5px;color:var(--ink-2)}
+.meter strong{font:600 26px/1 "IBM Plex Sans",sans-serif;color:var(--ink)}
+.meter strong small{font-size:15px;color:var(--muted);margin-inline-start:2px}
+.bar{height:6px;border-radius:3px;background:var(--line-2);margin-top:12px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:3px;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.meter.sim .bar i{background:var(--indigo-2)}
+.meter.ai .bar i{background:var(--teal)}
+.on-m .meter.sim .bar i{width:9%}
+.on-m .meter.ai .bar i{width:4%}
+.demo-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px;margin-inline-end:180px;font-size:13px;color:var(--muted)}
+.replay{border:0;background:none;color:var(--indigo);font:600 13px/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:6px 4px}
+.replay svg{width:15px;height:15px}
+
+/* sections */
+section.block{padding:96px 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:end;margin-bottom:48px}
+.head p{color:var(--ink-2)}
+
+/* contents (services) */
+.contents{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:12px 40px}
+.toc{list-style:none;margin:0;padding:0;counter-reset:s}
+.toc li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:6px 18px;padding:24px 0;border-bottom:1px solid var(--line-2);counter-increment:s}
+.toc li:last-child{border-bottom:0}
+.toc li::before{content:counter(s);font:500 15px/1.9 "IBM Plex Serif",serif;color:var(--muted);grid-row:1/3}
+.toc .t{display:flex;align-items:baseline;gap:14px;min-width:0}
+.toc h3{font-size:21px;flex-shrink:1}
+.toc .lead-dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-6px);min-width:24px}
+.toc .price{grid-column:3;grid-row:1;white-space:nowrap;font-size:14px;color:var(--muted);align-self:baseline}
+.toc .price b{font:600 21px/1 "IBM Plex Sans",sans-serif;color:var(--ink);margin-inline-start:4px}
+.toc p{grid-column:2/4;color:var(--ink-2);font-size:16px;max-width:76ch}
+.toc .tags{grid-column:2/4;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.toc .tags span{font:500 12.5px/1 "IBM Plex Sans",var(--sans);color:var(--indigo);background:#EEEDF6;border-radius:6px;padding:6px 8px}
+.toc-note{margin-top:18px;color:var(--muted);font-size:14.5px}
+
+/* integrity */
+.integrity{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--ink);color:#E9E7F3;border-radius:var(--r);padding:28px 32px}
+.integrity svg{width:40px;height:40px;color:var(--teal)}
+.integrity b{display:block;font-family:var(--display);font-size:22px;color:#fff;font-weight:600;margin-bottom:4px}
+.integrity p{color:#C9C6DA;font-size:16px}
+
+/* reports */
+.reports{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rep{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.rep h3{margin-bottom:8px}
+.rep ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.rep li{display:grid;grid-template-columns:20px 1fr;gap:10px;color:var(--ink-2);font-size:16px}
+.rep li svg{width:18px;height:18px;margin-top:5px;color:var(--teal)}
+.caveat{margin-top:20px;padding:14px 16px;border-radius:10px;background:#FBF1F4;color:#7A3049;font-size:14.5px;line-height:1.7}
+
+/* packages */
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.pack{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.pack.feat{border:2px solid var(--indigo);position:relative}
+.pack .badge{position:absolute;top:-14px;inset-inline-start:24px;background:var(--indigo);color:#fff;font:600 13px/1 var(--sans);padding:7px 12px;border-radius:999px}
+.pack .for{color:var(--muted);font-size:15px;margin-top:4px}
+.pack .from{margin:22px 0 4px;color:var(--muted);font-size:14.5px}
+.pack .amt{display:flex;align-items:baseline;gap:8px}
+.pack .amt b{font:600 44px/1 "IBM Plex Sans",sans-serif;color:var(--ink);letter-spacing:-.02em}
+.pack .amt span{color:var(--ink-2);font-weight:500}
+.pack ul{list-style:none;margin:24px 0 28px;padding:20px 0 0;border-top:1px solid var(--line-2);display:grid;gap:11px;flex:1;align-content:start}
+.pack li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:15.5px;color:var(--ink-2)}
+.pack li svg{width:18px;height:18px;margin-top:5px;color:var(--teal)}
+.pack .btn{width:100%}
+.packs-note{margin-top:20px;color:var(--muted);font-size:14.5px}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:st;position:relative}
+.steps li{counter-increment:st;padding:0 24px 0 0;position:relative}
+html[dir=rtl] .steps li{padding:0 0 0 24px}
+.steps li::before{content:counter(st);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--sheet);border:1.5px solid var(--indigo);color:var(--indigo);font:600 18px/1 "IBM Plex Sans",sans-serif;margin-bottom:20px;position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:23px;inset-inline-start:46px;inset-inline-end:0;border-top:1.5px dashed var(--line)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:19px;margin-bottom:8px}
+.steps p{color:var(--ink-2);font-size:15.5px}
+
+/* work */
+.works{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.work{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.work:hover{border-color:var(--indigo);box-shadow:0 20px 40px -26px rgba(34,30,63,.45)}
+.work img{aspect-ratio:1200/630;object-fit:cover;border-bottom:1px solid var(--line)}
+.work div{padding:24px 26px 26px}
+.work .meta{color:var(--muted);font-size:14.5px;margin-top:4px}
+.work p{color:var(--ink-2);font-size:15.5px;margin-top:12px}
+.work .go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--indigo);font-weight:600;font-size:15px}
+.work .go svg{width:16px;height:16px}
+html[dir=rtl] .work .go svg{transform:scaleX(-1)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.about .lead{margin-top:18px}
+.creds{display:grid;gap:0;background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:8px 30px}
+.cred{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line-2)}
+.cred:last-child{border-bottom:0}
+.cred dt{color:var(--muted);font-size:15px;font-weight:500}
+.cred dd{margin:0;display:grid;gap:6px;color:var(--ink);font-size:16px}
+
+/* faq */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 0;font:600 18px/1.5 var(--sans);color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{width:20px;height:20px;flex-shrink:0;color:var(--indigo);transition:transform .25s}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq details p{padding:0 0 24px;color:var(--ink-2);max-width:70ch}
+
+/* contact */
+.contact{background:var(--indigo);color:#fff;border-top:0}
+.contact h2{color:#fff}
+.contact .head p{color:#D9D6EC}
+.cgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}
+.form{background:var(--sheet);color:var(--ink);border-radius:var(--r);padding:32px;display:grid;gap:18px}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:7px;font-size:15px;font-weight:600;color:var(--ink)}
+.field small{font-weight:400;color:var(--muted)}
+.input{width:100%;font:400 16px/1.5 var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-height:48px}
+.input:focus{outline:none;border-color:var(--indigo);box-shadow:0 0 0 3px rgba(70,64,111,.18)}
+textarea.input{min-height:120px;resize:vertical}
+select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236E6A86' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px;background-position:left 14px center;padding-left:40px}
+html.l-en select.input{background-position:right 14px center;padding-left:14px;padding-right:40px}
+.form .err{color:#A23A57;font-size:14.5px;min-height:1px}
+.form .priv{color:var(--muted);font-size:13.5px}
+.form .btn-wa{background:#1F7D67;color:#fff}
+.form .btn-wa:hover{background:#17604F}
+.channels{display:grid;gap:12px}
+.ch{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px 18px;text-decoration:none;color:#fff;transition:background .2s}
+.ch:hover{background:rgba(255,255,255,.14)}
+.ch svg{width:24px;height:24px;justify-self:center}
+.ch span{display:block;font-size:14px;color:#CFCBE6}
+.ch b{font:600 16px/1.4 "IBM Plex Sans",var(--sans);direction:ltr;unicode-bidi:isolate}
+.hours{margin-top:6px;color:#CFCBE6;font-size:14.5px;padding:0 4px}
+
+footer{background:var(--ink);color:#B8B4CF;padding:36px 0;font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .brand{color:#fff}
+footer .brand b i{color:#B3ABE6}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .nav.open{display:flex;position:absolute;top:72px;inset-inline:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 20px 18px;gap:2px}
+  .nav.open a{padding:12px}
+  .actions{margin-inline-start:auto}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .desk{max-width:720px}
+  .head{grid-template-columns:1fr;gap:16px}
+  .packs{grid-template-columns:1fr;max-width:560px}
+  .steps{grid-template-columns:1fr 1fr;gap:36px 0}
+  .steps li:nth-child(2)::after{display:none}
+  .about{grid-template-columns:1fr;gap:32px}
+  .cgrid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .top .wrap{gap:12px;height:64px}
+  .nav.open{top:64px}
+  .brand b{font-size:17px}
+  .actions .btn{display:none}
+  .hero{padding:32px 0 64px}
+  .lead{font-size:17px}
+  .sheet{margin-inline-end:0;padding:24px 20px 22px}
+  .note{position:relative;inset:auto;width:auto;margin-top:12px;transform:translateY(8px)}
+  html[dir=rtl] .note{transform:translateY(8px)}
+  .note::after{display:none}
+  .checks,.demo-foot{margin-inline-end:0}
+  section.block{padding:64px 0}
+  .contents{padding:4px 20px}
+  .toc li{grid-template-columns:28px minmax(0,1fr);padding:20px 0}
+  .toc .lead-dots{display:none}
+  .toc .price{grid-column:2;grid-row:auto}
+  .toc p,.toc .tags{grid-column:2}
+  .integrity{grid-template-columns:1fr;padding:24px}
+  .reports,.works{grid-template-columns:1fr}
+  .rep,.pack{padding:24px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .steps li,html[dir=rtl] .steps li{padding:0;display:grid;grid-template-columns:46px 1fr;gap:0 16px}
+  .steps li::before{margin:0;grid-row:1/3}
+  .steps li::after{display:none}
+  .creds{padding:4px 20px}
+  .cred{grid-template-columns:1fr;gap:6px}
+  .form{padding:22px}
+  .form .two{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main"><span class="ar">تخطَّ إلى المحتوى</span><span class="en">Skip to content</span></a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.7L0 24l6.4-1.7A11.8 11.8 0 0 0 24 12.2c0-3.2-1.2-6.1-3.6-8.6Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7 8 10.3h-6.2l-4.9-6.3L5.4 21H2.3l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.3 4.7H5.5l11.2 14.5Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-replay" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="logo" viewBox="0 0 40 40"><rect x="4" y="3" width="26" height="34" rx="3" fill="#46406F"/><path d="M10 12h14M10 17h14M10 22h9" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".85"/><circle cx="29" cy="28" r="8" fill="#2FA98C" stroke="#F6F6F9" stroke-width="2.5"/><path d="m25.6 28 2.3 2.3 4.4-4.6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Research by Eman"><svg><use href="#logo"/></svg><b>Research <i>by</i> Eman</b></a>
+    <nav class="nav" id="nav" aria-label="الأقسام">
+      <a href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
+      <a href="#packages"><span class="ar">الباقات</span><span class="en">Packages</span></a>
+      <a href="#process"><span class="ar">آلية العمل</span><span class="en">How it works</span></a>
+      <a href="#work"><span class="ar">نماذج الأعمال</span><span class="en">Work</span></a>
+      <a href="#about"><span class="ar">عن إيمان</span><span class="en">About</span></a>
+      <a href="#faq"><span class="ar">الأسئلة الشائعة</span><span class="en">FAQ</span></a>
+    </nav>
+    <div class="actions">
+      <button class="lang" id="lang" type="button" aria-label="Switch language"><span class="ar">EN</span><span class="en">ع</span></button>
+      <a class="btn btn-primary btn-sm" href="#contact"><span class="ar">اطلب عرض سعر</span><span class="en">Get a quote</span></a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="القائمة"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>
+        <span class="ar">مراجعة بحثية</span><span class="ar">بمعايير التحكيم،</span><span class="en">Peer-review-grade feedback</span>
+        <span class="ar">قبل أن يراها المحكّمون</span><span class="en">before the reviewers see it</span>
+      </h1>
+      <p class="lead">
+        <span class="ar">مراجعة البحوث والرسائل، والتحكيم العلمي، والتحليل الإحصائي، وبناء المقاييس والتحقق من خصائصها السيكومترية، مع تقارير الاستلال والذكاء الاصطناعي عبر أدوات معتمدة. لطلبة الدراسات العليا والباحثين وأعضاء هيئة التدريس.</span>
+        <span class="en">Manuscript and thesis review, peer review, statistical analysis, scale development and psychometric validation, plus similarity and AI-content reports from accredited tools. For graduate students, researchers and faculty.</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact"><span class="ar">اطلب عرض سعر</span><span class="en">Request a quote</span></a>
+        <a class="btn btn-ghost" href="#services"><span class="ar">تصفّح الخدمات</span><span class="en">Browse services</span></a>
+      </div>
+      <div class="promise">
+        <span><svg><use href="#i-check"/></svg><span class="ar">سرية تامة للملفات</span><span class="en">Strict confidentiality</span></span>
+        <span><svg><use href="#i-check"/></svg><span class="ar">عرض سعر خلال 24 ساعة</span><span class="en">Quote within 24 hours</span></span>
+        <span><svg><use href="#i-check"/></svg><span class="ar">جولة تعديل مشمولة</span><span class="en">One revision round included</span></span>
+      </div>
+    </div>
+
+    <div class="desk" id="desk" aria-label="مثال توضيحي لمراجعة بحث" role="img">
+      <article class="sheet" aria-hidden="true">
+        <div class="ms-run"><span class="ar">مسودة للمراجعة</span><span class="en">Draft for review</span><span class="num">p. 7</span></div>
+        <h3 class="ms-title"><span class="ar">الخصائص السيكومترية لمقياس التوافق الأكاديمي لدى طلبة الجامعة</span><span class="en">Psychometric Properties of an Academic Adjustment Scale among University Students</span></h3>
+        <div class="ms-h"><span class="ar">٣. المنهجية والأدوات</span><span class="en">3. Method and instruments</span></div>
+        <p class="ms-p">
+          <span class="ar">طُبّق المقياس على عينة قوامها (412) طالبًا وطالبة، وبلغ معامل ألفا كرونباخ <span class="alpha num">α = 0.88</span>. <span class="mark">وتم التحقق من صدق المقياس بعرضه على مجموعة من المحكّمين</span>، ثم اعتُمدت الصورة النهائية في جمع البيانات.</span>
+          <span class="en">The scale was administered to 412 students, and Cronbach's alpha was <span class="alpha num">α = 0.88</span>. <span class="mark">Validity was established by submitting the scale to a panel of expert reviewers</span>, after which the final form was used for data collection.</span>
+        </p>
+        <div class="ghost-lines"><i></i><i></i><i></i></div>
+        <aside class="note n1"><b><span class="ar">ملاحظة منهجية</span><span class="en">Method note</span></b><span class="ar">صدق المحكّمين وحده لا يكفي. أضف تحليلًا عامليًا توكيديًا مع مؤشرات المطابقة (CFI، RMSEA).</span><span class="en">Expert review alone isn't enough. Add a confirmatory factor analysis with fit indices (CFI, RMSEA).</span></aside>
+        <aside class="note n2"><b><span class="ar">مستوفى</span><span class="en">Meets criterion</span></b><span class="ar">الثبات مرتفع. يُستحسن إضافة معامل أوميغا ماكدونالد بجانب ألفا.</span><span class="en">Reliability is high. Consider reporting McDonald's omega alongside alpha.</span></aside>
+      </article>
+      <div class="checks" aria-hidden="true">
+        <div class="meter sim"><div class="row"><span class="ar">نسبة التشابه</span><span class="en">Similarity</span><strong class="num"><span data-count="9">0</span><small>%</small></strong></div><div class="bar"><i></i></div></div>
+        <div class="meter ai"><div class="row"><span class="ar">مؤشرات المحتوى المولّد آليًا</span><span class="en">AI-content indicators</span><strong class="num"><span data-count="4">0</span><small>%</small></strong></div><div class="bar"><i></i></div></div>
+      </div>
+      <div class="demo-foot">
+        <span><span class="ar">مثال توضيحي، وليس نتيجة لبحث حقيقي</span><span class="en">Illustrative example, not a real manuscript</span></span>
+        <button class="replay" id="replay" type="button"><svg><use href="#i-replay"/></svg><span class="ar">إعادة العرض</span><span class="en">Replay</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="ar">الخدمات</span><span class="en">Services</span></h2>
+      <p class="lead"><span class="ar">كل خدمة تُسلَّم بتقرير مكتوب يوضّح ما رُوجع، وما يحتاج إلى معالجة، وسبب كل ملاحظة. الأسعار المذكورة نقطة بداية، ويتحدد السعر النهائي بعد الاطلاع على الملف وحجمه وموعد التسليم.</span><span class="en">Every service comes with a written report: what was reviewed, what needs work, and the reasoning behind each comment. Prices are starting points; the final quote depends on the file, its length and the deadline.</span></p>
+    </div>
+    <div class="contents">
+      <ol class="toc">
+        <li>
+          <div class="t"><h3><span class="ar">مراجعة البحوث والرسائل العلمية</span><span class="en">Manuscript and thesis review</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">300</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">قراءة نقدية للبحث أو الفصل بمعايير التحكيم: اتساق المشكلة والأسئلة مع المنهج والنتائج، وكفاية الأدلة، وسلامة العرض والتوثيق.</span><span class="en">A critical read against peer-review criteria: alignment of problem, questions, method and results; adequacy of evidence; clarity and referencing.</span></p>
+          <div class="tags"><span>APA 7</span><span class="ar">رسائل ماجستير ودكتوراه</span><span class="en">Master's &amp; PhD</span><span class="ar">بحوث للنشر</span><span class="en">Journal submissions</span></div>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">التحكيم العلمي للبحوث والأدوات</span><span class="en">Peer review of papers and instruments</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">250</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">تقرير تحكيم مكتوب بتوصية واضحة، أو تحكيم أداة الدراسة (استبانة، مقياس، اختبار) بندًا بندًا من حيث الانتماء والوضوح والصياغة.</span><span class="en">A written review report with a clear recommendation, or item-by-item review of a questionnaire, scale or test for relevance, clarity and wording.</span></p>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">التحليل الإحصائي</span><span class="en">Statistical analysis</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">400</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">اختيار الأساليب المناسبة للأسئلة والفرضيات وتنفيذها، مع جداول بأسلوب APA وشرح للنتائج يساعدك على كتابة التفسير والمناقشة.</span><span class="en">Choosing and running the right tests for your questions and hypotheses, with APA-style tables and a walkthrough of the results to support your own discussion.</span></p>
+          <div class="tags"><span>SPSS</span><span>JASP</span><span>R</span><span>AMOS</span></div>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">بناء المقاييس والتحقق السيكومتري</span><span class="en">Scale development and psychometric validation</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">500</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">صياغة البنود، والصدق والثبات، والتحليل العاملي الاستكشافي والتوكيدي، والتحقق من التكافؤ القياسي، وفق معايير AERA وAPA وNCME.</span><span class="en">Item writing, validity and reliability evidence, exploratory and confirmatory factor analysis, and measurement invariance, following the AERA/APA/NCME Standards.</span></p>
+          <div class="tags"><span>EFA</span><span>CFA</span><span>ω / α</span><span class="ar">التكافؤ القياسي</span><span class="en">Invariance</span></div>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">المراجعات المنهجية</span><span class="en">Systematic reviews</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">1500</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">بروتوكول المراجعة، واستراتيجية البحث في قواعد البيانات، والفرز، ومخطط PRISMA 2020، وتقييم جودة أدوات القياس وفق COSMIN.</span><span class="en">Review protocol, database search strategy, screening, PRISMA 2020 flow, and appraisal of measurement instruments with COSMIN.</span></p>
+          <div class="tags"><span>PRISMA 2020</span><span>COSMIN</span></div>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">المراجع والمصادر</span><span class="en">References and sources</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">150</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">البحث عن دراسات محكّمة حديثة في موضوعك، وتنظيمها في برنامج لإدارة المراجع، وضبط التوثيق داخل النص وفي القائمة.</span><span class="en">Finding recent peer-reviewed studies on your topic, organising them in a reference manager, and fixing in-text citations and the reference list.</span></p>
+          <div class="tags"><span>Mendeley</span><span>Zotero</span><span>EndNote</span></div>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">تقرير الاستلال وتقرير الذكاء الاصطناعي</span><span class="en">Similarity and AI-content reports</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">50</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">فحص النص عبر أدوات معتمدة، وتسليم التقرير مع قراءة توضّح مصادر التشابه وما يحتاج إلى توثيق أو معالجة.</span><span class="en">Text checked with accredited tools; you receive the report plus a reading of where the overlap comes from and what needs citing or reworking.</span></p>
+        </li>
+        <li>
+          <div class="t"><h3><span class="ar">تصميم المنصات التعليمية التفاعلية</span><span class="en">Interactive learning platforms</span></h3><span class="lead-dots"></span></div>
+          <span class="price"><span class="ar">تبدأ من</span><span class="en">From</span><b class="num">1200</b> <span class="ar">ر.س</span><span class="en">SAR</span></span>
+          <p><span class="ar">منصات للمعلمين والمدارس: دروس واختبارات ونماذج ثلاثية الأبعاد ولوحة متابعة للمعلم، تعمل على الجوال والحاسب.</span><span class="en">Platforms for teachers and schools: lessons, quizzes, 3D models and a teacher dashboard, on phone and desktop.</span></p>
+        </li>
+      </ol>
+    </div>
+    <div class="integrity">
+      <svg><use href="#i-shield"/></svg>
+      <div>
+        <b><span class="ar">نراجع ونحلّل وندرّب، ولا نكتب البحوث نيابةً عن أصحابها</span><span class="en">We review, analyse and coach. We don't write research on anyone's behalf.</span></b>
+        <p><span class="ar">العمل يبقى عملك. دورنا أن نرفع جودته ونوضّح لك أسباب كل ملاحظة، بما يتوافق مع أنظمة النزاهة الأكاديمية في الجامعات.</span><span class="en">The work stays yours. Our job is to raise its quality and explain the reason behind every comment, in line with university academic-integrity rules.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reports">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="ar">تقارير الاستلال والذكاء الاصطناعي</span><span class="en">Similarity and AI-content reports</span></h2>
+      <p class="lead"><span class="ar">أكثر ما يُطلب قبل التسليم. نستخدم أدوات معتمدة، ونرسل التقرير كما يصدر منها، ومعه قراءة مختصرة تساعدك على فهمه.</span><span class="en">The most requested check before submission. We use accredited tools, send the report as issued, and add a short reading to help you act on it.</span></p>
+    </div>
+    <div class="reports">
+      <article class="rep">
+        <h3><span class="ar">تقرير الاستلال (نسبة التشابه)</span><span class="en">Similarity report</span></h3>
+        <p class="ar" style="color:var(--ink-2)">يقارن النص بالمنشور من بحوث ومواقع ورسائل، ويحدد المقاطع المتشابهة ومصادرها.</p>
+        <p class="en" style="color:var(--ink-2)">Compares your text with published papers, theses and web sources, and marks matching passages with their sources.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span class="ar">النسبة الإجمالية ونسبة كل مصدر</span><span class="en">Overall and per-source percentages</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">تمييز ما هو اقتباس موثّق مما يحتاج إلى توثيق</span><span class="en">Cited quotations separated from passages that need citing</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">إمكانية استبعاد المراجع والاقتباسات حسب متطلبات جامعتك</span><span class="en">Exclude references and quotes to match your university's settings</span></li>
+        </ul>
+      </article>
+      <article class="rep">
+        <h3><span class="ar">تقرير مؤشرات الذكاء الاصطناعي</span><span class="en">AI-content indicator report</span></h3>
+        <p class="ar" style="color:var(--ink-2)">يقدّر احتمال أن تكون أجزاء من النص مولّدة بأدوات الذكاء الاصطناعي، ويحدد المقاطع المعنية.</p>
+        <p class="en" style="color:var(--ink-2)">Estimates how likely parts of the text are to be AI-generated, and highlights the passages concerned.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span class="ar">نسبة تقديرية مع تمييز المقاطع</span><span class="en">Estimated share with highlighted passages</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">قراءة للنتيجة توضّح حدودها</span><span class="en">A reading of the result and its limits</span></li>
+        </ul>
+        <p class="caveat"><span class="ar">نتائج كشف الذكاء الاصطناعي احتمالية، وقد تخطئ في الاتجاهين، لذلك نقدّمها مؤشرًا يُقرأ مع غيره، وليست حكمًا نهائيًا على النص.</span><span class="en">AI-detection results are probabilistic and can be wrong in either direction, so we present them as one indicator to be read with others, not as a verdict on the text.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="packages">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="ar">الباقات</span><span class="en">Packages</span></h2>
+      <p class="lead"><span class="ar">باقات مجمّعة لمن يريد أكثر من خدمة على الملف نفسه، بسعر أقل من طلب كل خدمة منفردة.</span><span class="en">Bundles for when one file needs more than one service, priced below ordering each separately.</span></p>
+    </div>
+    <div class="packs">
+      <article class="pack">
+        <h3><span class="ar">باقة الفحص</span><span class="en">Check</span></h3>
+        <p class="for"><span class="ar">قبل التسليم للمشرف أو المجلة</span><span class="en">Before you hand it in</span></p>
+        <p class="from"><span class="ar">تبدأ من</span><span class="en">From</span></p>
+        <div class="amt"><b class="num">90</b><span><span class="ar">ر.س</span><span class="en">SAR</span></span></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span class="ar">تقرير الاستلال</span><span class="en">Similarity report</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">تقرير مؤشرات الذكاء الاصطناعي</span><span class="en">AI-content indicator report</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">قراءة مكتوبة للنتيجتين</span><span class="en">Written reading of both results</span></li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact" data-pick="pk1"><span class="ar">اطلب هذه الباقة</span><span class="en">Choose this package</span></a>
+      </article>
+      <article class="pack feat">
+        <span class="badge"><span class="ar">الأكثر طلبًا</span><span class="en">Most requested</span></span>
+        <h3><span class="ar">باقة المراجعة الشاملة</span><span class="en">Full review</span></h3>
+        <p class="for"><span class="ar">لبحث أو فصل من رسالة</span><span class="en">For a paper or a thesis chapter</span></p>
+        <p class="from"><span class="ar">تبدأ من</span><span class="en">From</span></p>
+        <div class="amt"><b class="num">350</b><span><span class="ar">ر.س</span><span class="en">SAR</span></span></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span class="ar">مراجعة منهجية بمعايير التحكيم مع تعليقات على النص</span><span class="en">Peer-review-grade method review with in-text comments</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">مراجعة التوثيق وقائمة المراجع</span><span class="en">Citation and reference-list check</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">تقرير الاستلال وتقرير الذكاء الاصطناعي</span><span class="en">Similarity and AI-content reports</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">جولة مراجعة ثانية بعد التعديل</span><span class="en">Second pass after your revisions</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#contact" data-pick="pk2"><span class="ar">اطلب هذه الباقة</span><span class="en">Choose this package</span></a>
+      </article>
+      <article class="pack">
+        <h3><span class="ar">باقة الباحث المتكاملة</span><span class="en">Researcher</span></h3>
+        <p class="for"><span class="ar">لرسالة أو بحث يحتاج تحليلًا</span><span class="en">For a study that needs analysis</span></p>
+        <p class="from"><span class="ar">تبدأ من</span><span class="en">From</span></p>
+        <div class="amt"><b class="num">900</b><span><span class="ar">ر.س</span><span class="en">SAR</span></span></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><span class="ar">كل ما في باقة المراجعة الشاملة</span><span class="en">Everything in Full review</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">التحليل الإحصائي مع جداول APA</span><span class="en">Statistical analysis with APA tables</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">التحقق من صدق الأداة وثباتها</span><span class="en">Instrument validity and reliability evidence</span></li>
+          <li><svg><use href="#i-check"/></svg><span class="ar">تنظيم المراجع في برنامج إدارة المراجع</span><span class="en">References organised in a reference manager</span></li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact" data-pick="pk3"><span class="ar">اطلب هذه الباقة</span><span class="en">Choose this package</span></a>
+      </article>
+    </div>
+    <p class="packs-note"><span class="ar">الأسعار بالريال السعودي، ويتحدد السعر النهائي بعد الاطلاع على الملف. يتوفر خصم لطلبة البكالوريوس ولمن يطلب أكثر من فصل.</span><span class="en">Prices in Saudi riyals; the final quote follows a look at your file. Discounts for undergraduates and multi-chapter orders.</span></p>
+  </div>
+</section>
+
+<section class="block" id="process">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="ar">آلية العمل</span><span class="en">How it works</span></h2>
+      <p class="lead"><span class="ar">أربع خطوات واضحة من إرسال الملف حتى التسليم.</span><span class="en">Four clear steps from sending your file to delivery.</span></p>
+    </div>
+    <ol class="steps">
+      <li><h3><span class="ar">إرسال الطلب</span><span class="en">Send your request</span></h3><p><span class="ar">الملف ونوع الخدمة والموعد المطلوب، عبر النموذج أو واتساب أو البريد.</span><span class="en">Your file, the service and your deadline, by form, WhatsApp or email.</span></p></li>
+      <li><h3><span class="ar">عرض السعر والمدة</span><span class="en">Quote and timeline</span></h3><p><span class="ar">خلال 24 ساعة يصلك السعر النهائي وموعد التسليم المتوقع.</span><span class="en">Within 24 hours you get a final price and a delivery date.</span></p></li>
+      <li><h3><span class="ar">التنفيذ</span><span class="en">The work</span></h3><p><span class="ar">يبدأ العمل بعد تأكيد الطلب، مع تواصل مباشر إذا احتجنا إلى توضيح.</span><span class="en">Work starts once you confirm, with direct contact if anything needs clarifying.</span></p></li>
+      <li><h3><span class="ar">التسليم والتعديل</span><span class="en">Delivery and revision</span></h3><p><span class="ar">تسليم الملف مع التقرير، وجولة تعديل مشمولة في السعر.</span><span class="en">Your file and report, with one revision round included.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="ar">نماذج من المنصات التفاعلية</span><span class="en">Interactive platforms</span></h2>
+      <p class="lead"><span class="ar">منصات صُمّمت لمعلمات، تجمع الدروس والاختبارات والنماذج ثلاثية الأبعاد ولوحة متابعة للمعلمة. الروابط تفتح نسخًا تجريبية تعمل.</span><span class="en">Platforms built for teachers, combining lessons, quizzes, 3D models and a teacher dashboard. The links open working demos.</span></p>
+    </div>
+    <div class="works">
+      <a class="work" href="https://raddadieman-creator.github.io/biology-demo/" target="_blank" rel="noopener">
+        <img src="assets/work-biology.jpg" alt="واجهة منصة بيولاب" loading="lazy" width="1200" height="630">
+        <div>
+          <h3><span class="ar">بيولاب</span><span class="en">BioLab</span></h3>
+          <p class="meta"><span class="ar">أحياء 1، السنة الأولى المشتركة، الفصل الثامن: المفصليات</span><span class="en">Biology 1, first secondary year, chapter 8: Arthropods</span></p>
+          <p><span class="ar">سبعة نماذج ثلاثية الأبعاد بأجزاء قابلة للضغط، وخرائط مفاهيم متحركة، واختبارات، ولوحة شرف، ومصادر مذاكرة ترفعها المعلمة.</span><span class="en">Seven 3D models with clickable parts, animated concept maps, quizzes, an honour board, and study resources uploaded by the teacher.</span></p>
+          <span class="go"><span class="ar">افتح المنصة</span><span class="en">Open the platform</span><svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="work" href="https://raddadieman-creator.github.io/science-demo/" target="_blank" rel="noopener">
+        <img src="assets/work-science.jpg" alt="واجهة منصة مُختبري" loading="lazy" width="1200" height="630">
+        <div>
+          <h3><span class="ar">مُختبري</span><span class="en">Mukhtabari</span></h3>
+          <p class="meta"><span class="ar">العلوم، الأول المتوسط، وحدة «ما وراء الأرض»</span><span class="en">Science, first intermediate, unit "Beyond Earth"</span></p>
+          <p><span class="ar">دروس تفاعلية، وبنك أسئلة، واستيراد درجات من Excel، وتنبيهات وإعلانات، وسؤال وجواب بين الطالبة والمعلمة.</span><span class="en">Interactive lessons, a question bank, Excel grade import, notifications and announcements, and student–teacher Q&amp;A.</span></p>
+          <span class="go"><span class="ar">افتح المنصة</span><span class="en">Open the platform</span><svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about">
+  <div class="wrap about">
+    <div>
+      <h2><span class="ar">إيمان الردادي</span><span class="en">Eman Alraddadi</span></h2>
+      <p class="lead"><span class="ar">متخصصة في القياس والتقويم، وأعمل في التعليم منذ أكثر من عشرين عامًا. أراجع البحوث بعين المحكّم: ما الذي سيسأل عنه، وأين تضعف الأدلة، وكيف تُعرض النتائج بوضوح ودقة.</span><span class="en">I specialise in measurement and evaluation and have worked in education for more than twenty years. I review research the way a reviewer reads it: what they will ask, where the evidence is thin, and how to report results clearly and accurately.</span></p>
+    </div>
+    <dl class="creds">
+      <div class="cred"><dt><span class="ar">المؤهل</span><span class="en">Degree</span></dt><dd><span class="ar">ماجستير القياس والتقويم، جامعة طيبة</span><span class="en">M.Ed. in Measurement and Evaluation, Taibah University</span></dd></div>
+      <div class="cred"><dt><span class="ar">الشهادات المهنية</span><span class="en">Certifications</span></dt><dd><span>CCSP (NCDA)</span><span>GCDF (NCDA)</span><span class="ar">رخصة مدرب مهنية، هيئة تقويم التعليم والتدريب</span><span class="en">Professional Trainer Licence, ETEC</span><span class="ar">رخصة مهنية اجتماعية: أخصائي نفسي</span><span class="en">Social Professional Licence: psychology specialist</span></dd></div>
+      <div class="cred"><dt><span class="ar">العضويات</span><span class="en">Memberships</span></dt><dd><span class="ar">الجمعية الأمريكية للبحث التربوي (AERA)</span><span class="en">American Educational Research Association (AERA)</span><span class="ar">الرابطة الوطنية للتطوير المهني (NCDA)</span><span class="en">National Career Development Association (NCDA)</span><span class="ar">خبيرة في مرصد الخبراء</span><span class="en">Listed expert, Experts Observatory</span></dd></div>
+      <div class="cred"><dt><span class="ar">النشر والمشاركات</span><span class="en">Publications</span></dt><dd><span class="ar">مقالان في Career Convergence (NCDA)، 2026</span><span class="en">Two articles in Career Convergence (NCDA), 2026</span><span class="ar">ملصق علمي في مؤتمر جامعة الملك سعود، 2026</span><span class="en">Poster, King Saud University conference, 2026</span><span class="ar">ورقة علمية في مؤتمر عمّان، 2024</span><span class="en">Conference paper, Amman, 2024</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="head"><h2><span class="ar">الأسئلة الشائعة</span><span class="en">Questions</span></h2></div>
+    <div class="faq">
+      <details><summary><span class="ar">هل تبقى ملفاتي سرية؟</span><span class="en">Are my files kept confidential?</span><svg><use href="#i-plus"/></svg></summary><p><span class="ar">نعم. لا يُشارك الملف مع أي طرف، ولا يُحفظ في قواعد بيانات أدوات الفحص عند طلبك، ويُحذف بعد انتهاء العمل.</span><span class="en">Yes. Your file is never shared, is not stored in the checking tools' databases if you ask, and is deleted once the work is done.</span></p></details>
+      <details><summary><span class="ar">كم يستغرق العمل؟</span><span class="en">How long does it take?</span><svg><use href="#i-plus"/></svg></summary><p><span class="ar">تقارير الاستلال والذكاء الاصطناعي خلال يوم عمل غالبًا. المراجعة والتحليل الإحصائي تعتمد على حجم الملف، ويُحدد الموعد في عرض السعر. يتوفر التسليم العاجل برسوم إضافية.</span><span class="en">Similarity and AI reports usually take one working day. Reviews and analyses depend on length; the date is set in your quote. Rush delivery is available for an extra fee.</span></p></details>
+      <details><summary><span class="ar">ماذا لو احتجت تعديلًا بعد التسليم؟</span><span class="en">What if I need changes after delivery?</span><svg><use href="#i-plus"/></svg></summary><p><span class="ar">جولة تعديل واحدة مشمولة في السعر خلال سبعة أيام من التسليم، على نطاق الطلب نفسه.</span><span class="en">One revision round is included within seven days of delivery, within the original scope.</span></p></details>
+      <details><summary><span class="ar">هل تكتبون البحث أو الرسالة كاملة؟</span><span class="en">Can you write my paper or thesis?</span><svg><use href="#i-plus"/></svg></summary><p><span class="ar">لا. نراجع ونحلّل ونوضّح ونقترح، ويبقى البحث عملك. هذا يحميك أمام لجان النزاهة الأكاديمية، ويجعلك قادرًا على الدفاع عن كل ما في بحثك.</span><span class="en">No. We review, analyse, explain and suggest; the research stays yours. That protects you with integrity committees and means you can defend every part of it.</span></p></details>
+      <details><summary><span class="ar">كيف يتم الدفع؟</span><span class="en">How do I pay?</span><svg><use href="#i-plus"/></svg></summary><p><span class="ar">تحويل بنكي، بعد تأكيد عرض السعر. في الطلبات الكبيرة يُقسم المبلغ على دفعتين: عند البدء وعند التسليم.</span><span class="en">Bank transfer after you accept the quote. Larger orders are split into two payments: at the start and on delivery.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="block contact" id="contact">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="ar">اطلب عرض سعر</span><span class="en">Request a quote</span></h2>
+      <p class="lead"><span class="ar">اكتب تفاصيل طلبك، وسيُفتح واتساب برسالة جاهزة. أرفق الملف هناك.</span><span class="en">Fill in your request and WhatsApp opens with the message ready. Attach your file there.</span></p>
+    </div>
+    <div class="cgrid">
+      <form class="form" id="quote" novalidate>
+        <div class="two">
+          <label class="field" for="f-name"><span><span class="ar">الاسم</span><span class="en">Name</span></span><input class="input" id="f-name" name="fullname" autocomplete="name" required></label>
+          <label class="field" for="f-role"><span><span class="ar">الصفة</span><span class="en">You are</span></span>
+            <select class="input" id="f-role" name="role">
+              <option value="ms" data-ar="طالب/ة ماجستير" data-en="Master's student">طالب/ة ماجستير</option>
+              <option value="phd" data-ar="طالب/ة دكتوراه" data-en="PhD student">طالب/ة دكتوراه</option>
+              <option value="ug" data-ar="طالب/ة بكالوريوس" data-en="Undergraduate">طالب/ة بكالوريوس</option>
+              <option value="fac" data-ar="عضو هيئة تدريس / باحث" data-en="Faculty / researcher">عضو هيئة تدريس / باحث</option>
+              <option value="org" data-ar="معلم/ة أو جهة تعليمية" data-en="Teacher or institution">معلم/ة أو جهة تعليمية</option>
+            </select>
+          </label>
+        </div>
+        <label class="field" for="f-svc"><span><span class="ar">الخدمة المطلوبة</span><span class="en">Service</span></span>
+          <select class="input" id="f-svc" name="service">
+            <option value="s1" data-ar="مراجعة بحث أو رسالة" data-en="Manuscript or thesis review">مراجعة بحث أو رسالة</option>
+            <option value="s2" data-ar="تحكيم بحث أو أداة" data-en="Peer review of a paper or instrument">تحكيم بحث أو أداة</option>
+            <option value="s3" data-ar="تحليل إحصائي" data-en="Statistical analysis">تحليل إحصائي</option>
+            <option value="s4" data-ar="بناء مقياس وتحقق سيكومتري" data-en="Scale development and validation">بناء مقياس وتحقق سيكومتري</option>
+            <option value="s5" data-ar="مراجعة منهجية" data-en="Systematic review">مراجعة منهجية</option>
+            <option value="s6" data-ar="مراجع ومصادر" data-en="References and sources">مراجع ومصادر</option>
+            <option value="s7" data-ar="تقرير استلال وذكاء اصطناعي" data-en="Similarity and AI-content report">تقرير استلال وذكاء اصطناعي</option>
+            <option value="s8" data-ar="منصة تعليمية تفاعلية" data-en="Interactive learning platform">منصة تعليمية تفاعلية</option>
+            <option value="pk1" data-ar="باقة الفحص" data-en="Check package">باقة الفحص</option>
+            <option value="pk2" data-ar="باقة المراجعة الشاملة" data-en="Full review package">باقة المراجعة الشاملة</option>
+            <option value="pk3" data-ar="باقة الباحث المتكاملة" data-en="Researcher package">باقة الباحث المتكاملة</option>
+          </select>
+        </label>
+        <div class="two">
+          <label class="field" for="f-size"><span><span class="ar">حجم العمل</span><span class="en">Length</span> <small><span class="ar">(اختياري)</span><span class="en">(optional)</span></small></span><input class="input" id="f-size" name="size" data-ph-ar="مثل: 40 صفحة، أو فصلان" data-ph-en="e.g. 40 pages, or two chapters"></label>
+          <label class="field" for="f-date"><span><span class="ar">موعد التسليم المطلوب</span><span class="en">Deadline</span> <small><span class="ar">(اختياري)</span><span class="en">(optional)</span></small></span><input class="input" id="f-date" name="date" type="date"></label>
+        </div>
+        <label class="field" for="f-msg"><span><span class="ar">تفاصيل الطلب</span><span class="en">Details</span></span><textarea class="input" id="f-msg" name="msg" data-ph-ar="عنوان البحث أو موضوعه، وما تحتاجه بالتحديد" data-ph-en="Your topic or title, and exactly what you need"></textarea></label>
+        <p class="err" id="f-err" role="alert"></p>
+        <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg><span class="ar">إرسال الطلب عبر واتساب</span><span class="en">Send via WhatsApp</span></button>
+        <p class="priv"><span class="ar">لا يحفظ الموقع أي بيانات. النموذج يجهّز الرسالة فقط، وأنت من يرسلها.</span><span class="en">This site stores nothing. The form only prepares the message; you send it.</span></p>
+      </form>
+      <div class="channels">
+        <a class="ch" href="https://wa.me/966581913535" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><div><span class="ar">واتساب</span><span class="en">WhatsApp</span><b class="num">+966 58 191 3535</b></div></a>
+        <a class="ch" href="mailto:eman.research90@gmail.com"><svg><use href="#i-mail"/></svg><div><span class="ar">البريد الإلكتروني</span><span class="en">Email</span><b>eman.research90@gmail.com</b></div></a>
+        <a class="ch" href="https://x.com/Eman_Research" target="_blank" rel="noopener"><svg><use href="#i-x"/></svg><div><span class="ar">إكس</span><span class="en">X</span><b>@Eman_Research</b></div></a>
+        <p class="hours"><span class="ar">الرد خلال ساعات العمل، من الأحد إلى الخميس.</span><span class="en">Replies during working hours, Sunday to Thursday.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#main"><svg><use href="#logo"/></svg><b>Research <i>by</i> Eman</b></a>
+    <span><span class="ar">© 2026 جميع الحقوق محفوظة</span><span class="en">© 2026 All rights reserved</span></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+  function setLang(l){
+    var en=l==='en';
+    root.lang=en?'en':'ar'; root.dir=en?'ltr':'rtl';
+    root.classList.toggle('l-en',en);
+    document.querySelectorAll('[data-ph-ar]').forEach(function(el){el.placeholder=el.getAttribute(en?'data-ph-en':'data-ph-ar')});
+    document.querySelectorAll('option[data-ar]').forEach(function(o){o.textContent=o.getAttribute(en?'data-en':'data-ar')});
+    document.getElementById('nav').setAttribute('aria-label',en?'Sections':'الأقسام');
+    document.getElementById('menuBtn').setAttribute('aria-label',en?'Menu':'القائمة');
+    document.getElementById('desk').setAttribute('aria-label',en?'Illustrative example of a manuscript review':'مثال توضيحي لمراجعة بحث');
+    store.set('rbe-lang',l);
+  }
+  var q=new URLSearchParams(location.search).get('lang');
+  setLang(q==='en'||q==='ar'?q:(store.get('rbe-lang')||'ar'));
+  document.getElementById('lang').addEventListener('click',function(){setLang(root.classList.contains('l-en')?'ar':'en')});
+
+  // header + menu
+  var top=document.getElementById('top'), nav=document.getElementById('nav'), mb=document.getElementById('menuBtn');
+  addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+  // hero: one orchestrated review sequence
+  var desk=document.getElementById('desk');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timers=[];
+  function count(){
+    desk.querySelectorAll('[data-count]').forEach(function(el){
+      var to=+el.dataset.count, t0=null;
+      if(reduce){el.textContent=to;return}
+      function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1300);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}
+      requestAnimationFrame(step);
+    });
+  }
+  function play(){
+    timers.forEach(clearTimeout); timers=[];
+    desk.classList.remove('on','on-1','on-a','on-2','on-m');
+    desk.querySelectorAll('[data-count]').forEach(function(el){el.textContent='0'});
+    if(reduce){desk.classList.add('on','on-1','on-a','on-2','on-m');count();return}
+    void desk.offsetWidth;
+    [[500,'on'],[1400,'on-1'],[2400,'on-a'],[3000,'on-2'],[3700,'on-m']].forEach(function(s){
+      timers.push(setTimeout(function(){desk.classList.add(s[1]);if(s[1]==='on-m')count()},s[0]));
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){play();io.disconnect()}},{threshold:.35});
+    io.observe(desk);
+  } else play();
+  document.getElementById('replay').addEventListener('click',play);
+
+  function placeNotes(){
+    var sheet=desk.querySelector('.sheet'), n1=desk.querySelector('.n1'), n2=desk.querySelector('.n2');
+    if(getComputedStyle(n1).position!=='absolute'){n1.style.top=n2.style.top='';return}
+    var en=root.classList.contains('l-en'), sel=en?'.en ':'.ar ';
+    var sr=sheet.getBoundingClientRect();
+    var a=desk.querySelector(sel+'.alpha').getBoundingClientRect(), m=desk.querySelector(sel+'.mark').getClientRects()[0];
+    var t2=a.top-sr.top-14, t1=Math.max(m.top-sr.top-14, t2+n2.offsetHeight+12);
+    n2.style.top=t2+'px'; n1.style.top=t1+'px';
+  }
+  placeNotes(); addEventListener('resize',placeNotes);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(placeNotes);
+  document.getElementById('lang').addEventListener('click',placeNotes);
+
+  // package buttons preselect the service
+  var svc=document.getElementById('f-svc');
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){svc.value=a.dataset.pick})});
+
+  // quote form → WhatsApp
+  document.getElementById('quote').addEventListener('submit',function(e){
+    e.preventDefault();
+    var en=root.classList.contains('l-en'), f=e.target, err=document.getElementById('f-err');
+    var name=f.fullname.value.trim(), msg=f.msg.value.trim();
+    if(!name){err.textContent=en?'Please enter your name.':'اكتب اسمك من فضلك.';f.fullname.focus();return}
+    if(!msg){err.textContent=en?'Add a line about what you need.':'اكتب سطرًا عن طلبك.';f.msg.focus();return}
+    err.textContent='';
+    var opt=function(s){return s.options[s.selectedIndex].textContent};
+    var L=en?['Hello, I would like a quote from Research by Eman.','Name','I am','Service','Length','Deadline','Details']
+            :['السلام عليكم، أرغب في عرض سعر من Research by Eman.','الاسم','الصفة','الخدمة','حجم العمل','موعد التسليم','التفاصيل'];
+    var lines=[L[0],'',L[1]+': '+name,L[2]+': '+opt(f.role),L[3]+': '+opt(f.service)];
+    if(f.size.value.trim())lines.push(L[4]+': '+f.size.value.trim());
+    if(f.date.value)lines.push(L[5]+': '+f.date.value);
+    lines.push(L[6]+': '+msg);
+    window.open('https://wa.me/966581913535?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
