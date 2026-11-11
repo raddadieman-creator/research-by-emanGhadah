@@ -500,6 +500,25 @@ html[dir=rtl] .c-send svg{transform:scaleX(-1)}
   .res-cta .btn{flex:1}
 }
 
+
+/* ===== institutional brand hero ===== */
+.bh{display:flex;flex-direction:column;align-items:center;gap:0}
+.bh-logo{width:104px;height:104px;filter:drop-shadow(0 22px 34px rgba(42,36,82,.35));animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.bh-name{margin:22px 0 0;display:flex;flex-direction:column;align-items:center;line-height:1;color:var(--ink)}
+.bh-en{font:700 clamp(46px,6.4vw,84px)/1 var(--serif);letter-spacing:-.02em;direction:ltr;color:var(--ink)}
+.bh-en em{font-style:italic;font-weight:600;color:var(--teal)}
+.bh-ar{font:700 clamp(30px,3.6vw,46px)/1.5 "Noto Naskh Arabic",serif;color:var(--indigo);margin-top:10px}
+.bh-tag{margin-top:6px;color:var(--ink-2);font-size:18px;font-weight:500}
+html.l-en .bh-tag{letter-spacing:.06em;font-size:15px;font-weight:600}
+.lic{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:#E4F5F0;color:#1E7A63;border:1px solid #BFE6DA;border-radius:999px;padding:7px 15px;font-weight:600;font-size:14.5px}
+.lic svg{width:18px;height:18px}
+.bh-line{margin-top:30px;padding-top:26px;border-top:1px solid var(--line);font:600 clamp(20px,2.2vw,27px)/1.6 var(--display);color:var(--ink-2);max-width:900px}
+.bh-line b{color:var(--indigo)}
+.hero-center .sub{margin-top:8px}
+@media (max-width:720px){.bh-logo{width:80px;height:80px}.bh-tag{font-size:16px}.bh-line{margin-top:22px;padding-top:20px}}
+@media (prefers-reduced-motion:reduce){.bh-logo{animation:none}}
+
 /* ===== light theme ===== */
 .top{color:var(--ink)}
 .top.solid{background:rgba(255,255,255,.9);box-shadow:0 1px 0 var(--line)}
@@ -613,11 +632,13 @@ html[dir=rtl] .c-send svg{transform:scaleX(-1)}
 <section class="hero">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="wrap hero-center">
-    <span class="pill"><i><svg><use href="#i-check"/></svg></i><span class="ar">فريق بحثي في القياس والتقويم والتحليل الإحصائي والذكاء الاصطناعي</span><span class="en">A research team in measurement, statistics and AI engineering</span></span>
-    <h1>
-      <span class="ar">مراجعة بحثية بمعايير التحكيم،</span><span class="en">Peer-review-grade feedback,</span>
-      <span class="g"><span class="ar">قبل أن يراها المحكّمون</span><span class="en">before the reviewers see it</span></span>
-    </h1>
+    <div class="bh">
+      <img class="bh-logo" src="assets/logo.svg" alt="">
+      <h1 class="bh-name"><span class="bh-en">Evidence <em>Gate</em></span><span class="bh-ar">بوابة الدليل</span></h1>
+      <p class="bh-tag"><span class="ar">للخدمات البحثية والتحليل الإحصائي</span><span class="en">Research Services &amp; Statistical Analysis</span></p>
+      <span class="lic"><svg><use href="#i-shield"/></svg><span class="ar">جهة مرخّصة</span><span class="en">Licensed provider</span></span>
+    </div>
+    <p class="bh-line"><span class="ar">مراجعة بحثية بمعايير التحكيم، <b>قبل أن يراها المحكّمون</b></span><span class="en">Peer-review-grade feedback, <b>before the reviewers see it</b></span></p>
     <p class="sub"><span class="ar">اكتب ما يحتاجه بحثك، ويرشّح لك المساعد الخدمة المناسبة وسعرها ومدتها.</span><span class="en">Describe what your research needs and the assistant suggests the right service, price and timeline.</span></p>
 
     <div class="console" id="console">
