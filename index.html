@@ -413,6 +413,93 @@ footer .logo{color:#fff}
   .rv{opacity:1;transform:none}
 }
 
+
+/* ===== smart hero ===== */
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero{padding:140px 0 0}
+.hero-center{display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-center h1{margin-top:22px}
+.hero-center .sub{margin:18px auto 0;max-width:60ch}
+.hero-center .trust{justify-content:center;margin-top:30px}
+.console{position:relative;width:100%;max-width:880px;margin-top:34px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid #DCD7F0;border-radius:28px;padding:18px;text-align:start;box-shadow:0 50px 90px -50px rgba(42,36,82,.55),0 0 0 7px rgba(106,93,194,.06);overflow:hidden}
+.console::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,transparent,#4FD6B4,#8F84E0,#EE8DAA,transparent);background-size:50% 100%;background-repeat:no-repeat;opacity:0;transition:opacity .3s}
+.console.busy::before{opacity:1;animation:scan 1.1s linear infinite}
+@keyframes scan{from{background-position:-50% 0}to{background-position:150% 0}}
+.c-head{display:flex;align-items:center;gap:12px;padding:2px 6px 14px}
+.c-head img{width:40px;height:40px}
+.c-head b{display:block;font:600 16px/1.3 var(--sans);color:var(--ink)}
+.c-head small{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13.5px;margin-top:3px}
+.live{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,169,140,.55)}70%{box-shadow:0 0 0 8px rgba(47,169,140,0)}100%{box-shadow:0 0 0 0 rgba(47,169,140,0)}}
+.c-input{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:7px 7px 7px 16px;transition:border-color .2s,box-shadow .2s}
+html[dir=rtl] .c-input{padding:7px 16px 7px 7px}
+.c-input:focus-within{border-color:var(--violet);box-shadow:0 0 0 4px rgba(106,93,194,.14)}
+.c-input .spark{width:22px;height:22px;color:var(--violet);flex-shrink:0}
+.c-input input{flex:1;min-width:0;height:46px;border:0;outline:0;background:transparent;font:500 17px/1.5 var(--sans);color:var(--ink)}
+.c-input input::placeholder{color:#9C97B3}
+.c-send{width:50px;height:50px;border-radius:14px;border:0;background:var(--indigo);color:#fff;cursor:pointer;display:grid;place-items:center;flex-shrink:0;transition:background .2s,transform .2s}
+.c-send:hover{background:var(--deep);transform:scale(1.04)}
+html[dir=rtl] .c-send svg{transform:scaleX(-1)}
+.c-chips{display:flex;flex-wrap:wrap;gap:8px;padding:14px 2px 2px}
+.c-chips button{border:1px solid var(--line);background:#fff;color:var(--ink-2);font:500 14px/1 var(--sans);padding:10px 14px;border-radius:999px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.c-chips button:hover,.c-chips button[aria-pressed=true]{border-color:#BDB4EA;color:var(--violet);background:var(--tint)}
+.c-out{margin-top:14px}
+.c-out:empty{display:none}
+.thinking{display:flex;align-items:center;gap:8px;padding:14px 8px;color:var(--muted);font-size:15px}
+.thinking i{width:8px;height:8px;border-radius:50%;background:var(--violet);animation:bob 1s infinite}
+.thinking i:nth-child(2){animation-delay:.15s;background:var(--teal)}
+.thinking i:nth-child(3){animation-delay:.3s;background:var(--rose)}
+.thinking span{margin-inline-start:6px}
+@keyframes bob{0%,80%,100%{transform:translateY(0);opacity:.45}40%{transform:translateY(-5px);opacity:1}}
+.res{background:linear-gradient(160deg,#F5F3FD,#fff 70%);border:1px solid #DCD7F0;border-radius:20px;padding:22px;animation:rise .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.res-top{display:flex;align-items:center;gap:14px}
+.res-top .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;color:#fff;flex-shrink:0;box-shadow:0 12px 22px -14px rgba(42,36,82,.8)}
+.res-top .ic svg{width:25px;height:25px}
+.res-top small{display:block;color:#1E8A70;font-weight:600;font-size:13.5px}
+.res-top h3{font-size:21px;line-height:1.4}
+.res-list{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 20px}
+.res-list li{display:flex;gap:10px;color:var(--ink-2);font-size:15px;line-height:1.6}
+.res-list li i{width:22px;height:22px;border-radius:50%;background:#DDF5EE;color:var(--teal);display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+.res-list li i svg{width:12px;height:12px}
+.res-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.res-meta div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.res-meta small{display:block;color:var(--muted);font-size:13px}
+.res-meta b{display:block;font:700 17px/1.5 var(--sans);color:var(--ink);margin-top:2px}
+.res-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.res-cta .btn{height:48px;font-size:15.5px}
+.res .also{margin-top:14px;color:var(--muted);font-size:14.5px}
+.res .also button{border:0;background:none;color:var(--violet);font:600 14.5px/1 var(--sans);cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+.demo-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.demo-text h2{font-size:clamp(30px,3.4vw,44px);margin-top:18px}
+.demo-text>p{color:var(--ink-2);font-size:18px;margin-top:14px}
+.demo-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.demo-list li{display:flex;gap:12px;align-items:center;font-weight:500}
+.demo-list li i{width:26px;height:26px;border-radius:50%;background:#DDF5EE;color:var(--teal);display:grid;place-items:center;flex-shrink:0}
+.demo-list li i svg{width:14px;height:14px}
+@media (max-width:1100px){.demo-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:720px){
+  .hero{padding-top:96px}
+  .hero-center h1{font-size:31px}
+  .hero-center .sub{font-size:16px}
+  .pill{font-size:12.5px;padding:6px 12px 6px 6px}
+  html[dir=rtl] .pill{padding:6px 6px 6px 12px}
+  .wm b{font-size:16.5px}
+  .logo{gap:9px}
+  .logo img{width:34px;height:34px}
+  .console{padding:12px;border-radius:22px}
+  .c-input input{font-size:16px}
+  .c-chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -12px;padding:12px 12px 2px}
+  .c-chips::-webkit-scrollbar{display:none}
+  .c-chips button{white-space:nowrap}
+  .res{padding:16px}
+  .res-list{grid-template-columns:1fr}
+  .res-meta{gap:8px}
+  .res-meta div{padding:10px}
+  .res-meta b{font-size:15px}
+  .res-cta .btn{flex:1}
+}
+
 /* ===== light theme ===== */
 .top{color:var(--ink)}
 .top.solid{background:rgba(255,255,255,.9);box-shadow:0 1px 0 var(--line)}
@@ -524,25 +611,64 @@ footer .logo{color:#fff}
 
 <main id="main">
 <section class="hero">
-  <span class="orb o1"></span><span class="orb o2"></span>
-  <div class="wrap hero-grid">
-    <div>
-      <span class="pill"><i><svg><use href="#i-check"/></svg></i><span class="ar">فريق بحثي في القياس والتقويم والتحليل الإحصائي والذكاء الاصطناعي</span><span class="en">A research team in measurement, statistics and AI engineering</span></span>
-      <h1>
-        <span class="ar">مراجعة بحثية<br>بمعايير التحكيم،</span><span class="en">Peer-review-grade feedback,</span>
-        <span class="g"><span class="ar">قبل أن يراها المحكّمون</span><span class="en">before the reviewers see it</span></span>
-      </h1>
-      <p class="sub"><span class="ar">مراجعة البحوث والرسائل، والتحكيم العلمي، والتحليل الإحصائي، وبناء المقاييس، مع تقارير الاستلال والذكاء الاصطناعي عبر أدوات معتمدة. لطلبة الدراسات العليا والباحثين وأعضاء هيئة التدريس.</span><span class="en">Manuscript and thesis review, peer review, statistical analysis and scale development, plus similarity and AI-content reports from accredited tools. For graduate students, researchers and faculty.</span></p>
-      <div class="hero-cta">
-        <a class="btn btn-glow" href="#contact"><span class="ar">اطلب عرض سعر</span><span class="en">Request a quote</span><svg class="ico"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-glass" href="#services"><span class="ar">استكشف الخدمات</span><span class="en">Explore services</span></a>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap hero-center">
+    <span class="pill"><i><svg><use href="#i-check"/></svg></i><span class="ar">فريق بحثي في القياس والتقويم والتحليل الإحصائي والذكاء الاصطناعي</span><span class="en">A research team in measurement, statistics and AI engineering</span></span>
+    <h1>
+      <span class="ar">مراجعة بحثية بمعايير التحكيم،</span><span class="en">Peer-review-grade feedback,</span>
+      <span class="g"><span class="ar">قبل أن يراها المحكّمون</span><span class="en">before the reviewers see it</span></span>
+    </h1>
+    <p class="sub"><span class="ar">اكتب ما يحتاجه بحثك، ويرشّح لك المساعد الخدمة المناسبة وسعرها ومدتها.</span><span class="en">Describe what your research needs and the assistant suggests the right service, price and timeline.</span></p>
+
+    <div class="console" id="console">
+      <div class="c-head">
+        <img src="assets/logo.svg" alt="">
+        <div><b><span class="ar">مساعد بوابة الدليل</span><span class="en">Evidence Gate assistant</span></b><small><i class="live"></i><span class="ar">يرشّح الخدمة من وصفك لطلبك</span><span class="en">Matches your request to a service</span></small></div>
       </div>
-      <div class="trust">
-        <span class="dots"><span style="background:#6A5DC2">AERA</span><span style="background:#2FA98C">NCDA</span><span style="background:#C95F7E">ETEC</span></span>
-        <span><span class="ar">عضوية AERA وNCDA، ورخصة مدرب مهنية</span><span class="en">AERA &amp; NCDA member, licensed professional trainer</span></span>
+      <form class="c-input" id="askForm" autocomplete="off">
+        <svg class="spark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"/><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2-2.2-.8 2.2-.8z" opacity=".6"/></svg>
+        <input id="ask" name="ask" maxlength="200">
+        <button class="c-send" type="submit" id="askBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+      <div class="c-chips" id="chips">
+        <button type="button" data-q-ar="مراجعة فصل من رسالة الماجستير قبل المناقشة" data-q-en="Review a thesis chapter before my defence"><span class="ar">مراجعة رسالة ماجستير</span><span class="en">Thesis review</span></button>
+        <button type="button" data-q-ar="تحليل عاملي توكيدي لمقياس دراستي" data-q-en="Confirmatory factor analysis for my scale"><span class="ar">تحليل عاملي توكيدي</span><span class="en">CFA for my scale</span></button>
+        <button type="button" data-q-ar="أريد معرفة نسبة الاستلال والذكاء الاصطناعي في بحثي" data-q-en="Similarity and AI check for my paper"><span class="ar">نسبة الاستلال</span><span class="en">Similarity check</span></button>
+        <button type="button" data-q-ar="مراجعة منهجية وفق PRISMA" data-q-en="A systematic review following PRISMA"><span class="ar">مراجعة منهجية PRISMA</span><span class="en">PRISMA review</span></button>
+        <button type="button" data-q-ar="تحليل بيانات الاستبانة في SPSS واختبار الفرضيات" data-q-en="Analyse my survey data in SPSS"><span class="ar">تحليل SPSS</span><span class="en">SPSS analysis</span></button>
+        <button type="button" data-q-ar="أحتاج مصادر ودراسات سابقة حديثة لبحثي" data-q-en="I need recent sources for my literature review"><span class="ar">مراجع حديثة</span><span class="en">Recent sources</span></button>
       </div>
+      <div class="c-out" id="out" aria-live="polite"></div>
     </div>
 
+    <div class="trust">
+      <span class="dots"><span style="background:#6A5DC2">AERA</span><span style="background:#2FA98C">NCDA</span><span style="background:#C95F7E">ETEC</span></span>
+      <span><span class="ar">عضوية AERA وNCDA، ورخصة مدرب مهنية</span><span class="en">AERA &amp; NCDA members, licensed professional trainer</span></span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><b class="num">+<span data-n="20">20</span></b><span><span class="ar">سنة خبرة في التعليم</span><span class="en">years in education</span></span></div>
+      <div class="stat"><b class="num"><span data-n="8">8</span></b><span><span class="ar">خدمات بحثية متخصصة</span><span class="en">specialised services</span></span></div>
+      <div class="stat"><b class="num"><span data-n="24">24</span><small style="font-size:.5em">h</small></b><span><span class="ar">لإرسال عرض السعر</span><span class="en">to send your quote</span></span></div>
+      <div class="stat"><b class="num">100%</b><span><span class="ar">سرية الملفات</span><span class="en">file confidentiality</span></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="demo">
+  <div class="wrap demo-grid">
+    <div class="demo-text rv">
+      <span class="kick"><span class="ar">شاهد المراجعة</span><span class="en">See a review</span></span>
+      <h2><span class="ar">هكذا نقرأ بحثك</span><span class="en">How we read your research</span></h2>
+      <p><span class="ar">نعلّق على النص نفسه، ونربط كل ملاحظة بمعيار منهجي واضح، ونرفق تقارير الفحص مع قراءة لنتائجها.</span><span class="en">We comment on the text itself, tie every note to a clear methodological standard, and attach the check reports with a reading of their results.</span></p>
+      <ul class="demo-list">
+        <li><i><svg><use href="#i-check"/></svg></i><span class="ar">ملاحظات على مواضعها في النص</span><span class="en">Comments placed where they apply</span></li>
+        <li><i><svg><use href="#i-check"/></svg></i><span class="ar">سبب كل ملاحظة وكيف تُعالج</span><span class="en">The reason for each note and how to fix it</span></li>
+        <li><i><svg><use href="#i-check"/></svg></i><span class="ar">تقرير الاستلال والذكاء الاصطناعي</span><span class="en">Similarity and AI-content reports</span></li>
+      </ul>
+    </div>
     <div class="stage" id="stage" role="img" aria-label="مثال توضيحي لمراجعة بحث">
       <article class="sheet" aria-hidden="true">
         <div class="sheet-top"><span class="ar">مسودة للمراجعة · ص 7</span><span class="en">Draft for review · p. 7</span><span class="tag"><span class="ar">ملاحظتان</span><span class="en">2 comments</span></span></div>
@@ -561,15 +687,6 @@ footer .logo{color:#fff}
         <div class="gauge ai"><svg viewBox="0 0 58 58"><circle class="bgc" cx="29" cy="29" r="24"/><circle class="fg" cx="29" cy="29" r="24"/></svg><div><b><span data-count="4">0</span>%</b><span><span class="ar">الذكاء الاصطناعي</span><span class="en">AI indicators</span></span></div></div>
       </div>
       <div class="demo-foot"><span><span class="ar">مثال توضيحي، وليس بحثًا حقيقيًا</span><span class="en">Illustrative example, not a real manuscript</span></span><button class="replay" id="replay" type="button"><svg><use href="#i-replay"/></svg><span class="ar">إعادة العرض</span><span class="en">Replay</span></button></div>
-    </div>
-  </div>
-
-  <div class="stats">
-    <div class="wrap">
-      <div class="stat"><b class="num">+<span data-n="20">20</span></b><span><span class="ar">سنة خبرة في التعليم</span><span class="en">years in education</span></span></div>
-      <div class="stat"><b class="num"><span data-n="8">8</span></b><span><span class="ar">خدمات بحثية متخصصة</span><span class="en">specialised services</span></span></div>
-      <div class="stat"><b class="num"><span data-n="24">24</span><small style="font-size:.5em">h</small></b><span><span class="ar">لإرسال عرض السعر</span><span class="en">to send your quote</span></span></div>
-      <div class="stat"><b class="num">100%</b><span><span class="ar">سرية الملفات</span><span class="en">file confidentiality</span></span></div>
     </div>
   </div>
 </section>
@@ -947,6 +1064,101 @@ footer .logo{color:#fff}
     var hs=new IntersectionObserver(function(es){if(es[0].isIntersecting){play();hs.disconnect()}},{threshold:.3});
     hs.observe(stage);
   } else {document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});play()}
+
+
+  // ===== smart assistant =====
+  var norm=function(t){return (' '+t+' ').toLowerCase().replace(/[\u064B-\u0652\u0640]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')};
+  var SV=[
+    {id:'s7',ic:'s-report',c:'r',ar:'تقرير الاستلال وتقرير الذكاء الاصطناعي',en:'Similarity and AI-content reports',p:50,tAr:'يوم عمل',tEn:'1 working day',
+     dAr:['تقرير الاستلال الرسمي من أداة معتمدة','تقرير مؤشرات الذكاء الاصطناعي','قراءة توضّح مصادر التشابه وما يحتاج توثيقًا'],dEn:['Official similarity report from an accredited tool','AI-content indicator report','A reading of overlap sources and what needs citing'],
+     k:[['استلال',6],['تشابه',5],['انتحال',5],['اقتباس',3],['turnitin',5],['ithenticate',5],['ذكاء اصطناعي',4],['الذكاء الاصطناعي',4],['chatgpt',4],['plagiarism',6],['similarity',5],['ai check',4],['ai ',2],['كشف',3],['نسبه',2]]},
+    {id:'s5',ic:'s-sys',c:'v',ar:'المراجعة المنهجية',en:'Systematic review',p:1500,tAr:'2–4 أسابيع',tEn:'2–4 weeks',
+     dAr:['بروتوكول المراجعة واستراتيجية البحث','الفرز ومخطط PRISMA 2020','تقييم جودة الدراسات أو الأدوات (COSMIN)'],dEn:['Protocol and search strategy','Screening and PRISMA 2020 flow','Quality appraisal (incl. COSMIN)'],
+     k:[['مراجعه منهجيه',8],['prisma',6],['cosmin',6],['systematic',6],['تحليل بعدي',5],['meta-analysis',5],['meta analysis',5],['scoping',5]]},
+    {id:'s4',ic:'s-scale',c:'r',ar:'بناء المقاييس والتحقق السيكومتري',en:'Scale development & validation',p:500,tAr:'5–10 أيام',tEn:'5–10 days',
+     dAr:['صدق البناء بالتحليل العاملي الاستكشافي والتوكيدي','الثبات (ألفا وأوميغا) ومؤشرات المطابقة','جداول ونص منهجي بأسلوب APA'],dEn:['Construct validity via EFA and CFA','Reliability (alpha, omega) and fit indices','APA tables and method text'],
+     k:[['سيكومتر',6],['عاملي',5],['توكيدي',5],['استكشافي',5],['cfa',5],['efa',5],['تكافؤ',5],['invariance',5],['صدق',3],['ثبات',3],['مقياس',3],['بناء',3],['الفا',2],['اوميغا',2],['validity',3],['reliability',3],['scale',3],['factor',4],['psychometric',6]]},
+    {id:'s3',ic:'s-stats',c:'t',ar:'التحليل الإحصائي',en:'Statistical analysis',p:400,tAr:'3–7 أيام',tEn:'3–7 days',
+     dAr:['اختيار الأساليب المناسبة لأسئلتك وفرضياتك','التنفيذ في SPSS أو R أو AMOS','جداول APA وشرح للنتائج'],dEn:['Methods matched to your questions','Run in SPSS, R or AMOS','APA tables and a results walkthrough'],
+     k:[['احصا',5],['spss',6],['amos',5],['jasp',5],['انحدار',4],['فرضي',3],['ارتباط',3],['anova',5],['تباين',3],['اختبار ت',4],['t-test',4],['بيانات',3],['تحليل',2],['نمذجه',3],['sem',3],['statistic',5],['regression',5],['data',3],['analy',2],['survey',2],[' r ',2]]},
+    {id:'s2',ic:'s-peer',c:'v',ar:'التحكيم العلمي',en:'Peer review',p:250,tAr:'3–5 أيام',tEn:'3–5 days',
+     dAr:['تقرير تحكيم مكتوب بتوصية واضحة','تحكيم الأداة بندًا بندًا: الانتماء والوضوح والصياغة','مقترحات تعديل محددة'],dEn:['Written review report with a clear recommendation','Item-by-item instrument review','Specific revision suggestions'],
+     k:[['تحكيم',6],['محكم',3],['استبانه',2],['استبيان',2],['اداه',3],['peer',5],['referee',5],['questionnaire',3],['instrument',3]]},
+    {id:'s6',ic:'s-refs',c:'t',ar:'المراجع والمصادر',en:'References & sources',p:150,tAr:'2–4 أيام',tEn:'2–4 days',
+     dAr:['دراسات محكّمة حديثة في موضوعك','مكتبة منظمة في Mendeley أو Zotero أو EndNote','ضبط التوثيق بأسلوب APA 7'],dEn:['Recent peer-reviewed studies on your topic','An organised Mendeley, Zotero or EndNote library','APA 7 citations fixed'],
+     k:[['مصادر',5],['دراسات سابقه',6],['مراجع حديث',6],['قائمه المراجع',5],['توثيق',4],['apa',3],['zotero',5],['mendeley',5],['endnote',5],['references',5],['sources',5],['citation',4],['literature',4],['مراجع',2]]},
+    {id:'s1',ic:'s-review',c:'t',ar:'مراجعة البحوث والرسائل العلمية',en:'Manuscript and thesis review',p:300,tAr:'3–7 أيام',tEn:'3–7 days',
+     dAr:['تعليقات على النص بمعايير التحكيم','اتساق الأسئلة والمنهج والنتائج','مراجعة التوثيق وقائمة المراجع'],dEn:['In-text comments against review criteria','Alignment of questions, method and results','Citation and reference check'],
+     k:[['مراجعه',2],['رساله',3],['فصل',2],['ماجستير',2],['دكتوراه',2],['مشرف',2],['مناقشه',2],['تدقيق',2],['نشر',1],['مجله',1],['بحث',1],['review',2],['thesis',3],['manuscript',3],['chapter',2],['dissertation',3],['defen',2]]},
+    {id:'s8',ic:'s-platform',c:'r',ar:'المنصات التعليمية التفاعلية',en:'Interactive learning platforms',p:1200,tAr:'1–3 أسابيع',tEn:'1–3 weeks',
+     dAr:['دروس واختبارات تفاعلية','نماذج ثلاثية الأبعاد ورسوم متحركة','لوحة متابعة للمعلم'],dEn:['Interactive lessons and quizzes','3D models and animations','A teacher dashboard'],
+     k:[['منصه',6],['موقع',4],['تطبيق',3],['تفاعلي',4],['درس',3],['معلم',3],['مدرسه',3],['طلاب',2],['طالبات',2],['ثلاثي الابعاد',4],['platform',6],['website',4],['interactive',4],['lms',4],['teacher',3]]}
+  ];
+  var out=document.getElementById('out'), ask=document.getElementById('ask'), cons=document.getElementById('console'), demoOn=true, typing=null;
+  function rank(q){var n=norm(q);return SV.map(function(v,i){var sc=0;v.k.forEach(function(k){if(n.indexOf(k[0])>-1)sc+=k[1]});return {v:v,sc:sc,i:i}}).filter(function(r){return r.sc>0}).sort(function(a,b){return b.sc-a.sc||a.i-b.i})}
+  function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function waLink(q,v,en){var t=en?['Hello, I would like a quote from Evidence Gate.','Service: '+(v?v.en:'Not sure yet'),'My request: '+q]:['السلام عليكم، أرغب في عرض سعر من بوابة الدليل (Evidence Gate).','الخدمة: '+(v?v.ar:'لم أحددها بعد'),'طلبي: '+q];return 'https://wa.me/966581913535?text='+encodeURIComponent(t.join('\n'))}
+  function render(q){
+    var en=root.classList.contains('l-en'), r=rank(q), html;
+    if(!r.length){
+      html='<div class="res"><div class="res-top"><span class="ic v"><svg><use href="#i-info"/></svg></span><div><small>'+(en?'Tell us a bit more':'نحتاج تفاصيل أكثر')+'</small><h3>'+(en?'We\'ll pick the right service for you':'نحدد لك الخدمة المناسبة')+'</h3></div></div>'+
+        '<p style="margin-top:12px;color:var(--ink-2)">'+(en?'Send your request as it is and we\'ll reply within 24 hours with the right service and a quote. Or try one of the suggestions above.':'أرسل طلبك كما هو، ونرد خلال 24 ساعة بالخدمة المناسبة وعرض السعر. أو جرّب أحد الاقتراحات في الأعلى.')+'</p>'+
+        '<div class="res-cta"><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waLink(q,null,en)+'"><svg class="ico"><use href="#i-wa"/></svg>'+(en?'Send via WhatsApp':'أرسل عبر واتساب')+'</a></div></div>';
+    } else {
+      var v=r[0].v, d=en?v.dEn:v.dAr, alt=r[1]&&r[1].sc>=4?r[1].v:null;
+      html='<div class="res"><div class="res-top"><span class="ic '+v.c+'"><svg><use href="#'+v.ic+'"/></svg></span><div><small>'+(en?'Recommended for you':'الخدمة المناسبة لطلبك')+'</small><h3>'+(en?v.en:v.ar)+'</h3></div></div>'+
+        '<ul class="res-list">'+d.map(function(x){return '<li><i><svg><use href="#i-check"/></svg></i><span>'+x+'</span></li>'}).join('')+'</ul>'+
+        '<div class="res-meta"><div><small>'+(en?'From':'تبدأ من')+'</small><b><span class="num">'+v.p+'</span> '+(en?'SAR':'ر.س')+'</b></div><div><small>'+(en?'Typical time':'المدة المتوقعة')+'</small><b>'+(en?v.tEn:v.tAr)+'</b></div><div><small>'+(en?'You receive':'تستلم')+'</small><b>'+(en?'Written report':'تقريرًا مكتوبًا')+'</b></div></div>'+
+        '<div class="res-cta"><a class="btn btn-glow" target="_blank" rel="noopener" href="'+waLink(q,v,en)+'"><svg class="ico"><use href="#i-wa"/></svg>'+(en?'Request this on WhatsApp':'اطلب هذه الخدمة عبر واتساب')+'</a><a class="btn btn-line" href="#services">'+(en?'All services':'كل الخدمات')+'</a></div>'+
+        (alt?'<p class="also">'+(en?'You may also need: ':'قد تحتاج أيضًا: ')+'<button type="button" data-alt="'+alt.id+'">'+(en?alt.en:alt.ar)+'</button></p>':'')+'</div>';
+    }
+    out.innerHTML=html;
+    var ab=out.querySelector('[data-alt]'); if(ab)ab.addEventListener('click',function(){var a=SV.filter(function(x){return x.id===ab.dataset.alt})[0];run(en?a.en:a.ar)});
+  }
+  function run(q){
+    q=(q||'').trim(); if(!q){ask.focus();return}
+    ask.value=q; cons.classList.add('busy');
+    var en=root.classList.contains('l-en');
+    out.innerHTML='<div class="thinking"><i></i><i></i><i></i><span>'+(en?'Reading your request…':'نقرأ طلبك…')+'</span></div>';
+    setTimeout(function(){cons.classList.remove('busy');render(q)},reduce?0:900);
+  }
+  function stopDemo(){demoOn=false;if(typing){clearTimeout(typing);typing=null}}
+  document.getElementById('askForm').addEventListener('submit',function(e){e.preventDefault();stopDemo();run(ask.value)});
+  ask.addEventListener('focus',function(){if(demoOn){stopDemo();ask.value='';out.innerHTML=''}});
+  document.querySelectorAll('#chips button').forEach(function(b){b.addEventListener('click',function(){stopDemo();var en=root.classList.contains('l-en');run(b.getAttribute(en?'data-q-en':'data-q-ar'))})});
+  var PH={ar:'مثال: أحتاج تحليلًا عامليًا توكيديًا لمقياس رسالتي',en:'e.g. I need a CFA for my thesis scale'};
+  function setPH(){ask.placeholder=root.classList.contains('l-en')?PH.en:PH.ar}
+  setPH(); document.getElementById('lang').addEventListener('click',function(){setPH();if(ask.value&&out.innerHTML&&!demoOn)render(ask.value)});
+  function demo(){
+    if(!demoOn||reduce)return;
+    var en=root.classList.contains('l-en'), t=en?'I need a confirmatory factor analysis for my scale':'أحتاج تحليلًا عامليًا توكيديًا لمقياس رسالتي', i=0; ask.value='';
+    (function tick(){if(!demoOn)return; ask.value=t.slice(0,++i); if(i<t.length)typing=setTimeout(tick,38); else typing=setTimeout(function(){if(demoOn)run(t)},350)})();
+  }
+  setTimeout(demo,900);
+
+  // ===== evidence network background =====
+  (function(){
+    var cv=document.getElementById('net'); if(!cv||!cv.getContext)return;
+    var cx=cv.getContext('2d'), hero=cv.parentElement, W,H,P=[],dpr=Math.min(2,window.devicePixelRatio||1),mx=-999,my=-999,run=true,raf;
+    var COL=['106,93,194','47,169,140','201,95,126','70,64,111'];
+    function size(){W=hero.clientWidth;H=hero.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);var n=Math.min(95,Math.round(W*H/15000));P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:1.4+Math.random()*1.8,c:COL[i%4]})}
+    function draw(){
+      cx.clearRect(0,0,W,H);
+      for(var i=0;i<P.length;i++){var a=P[i];
+        if(!reduce){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1}
+        for(var j=i+1;j<P.length;j++){var b=P[j],dx=a.x-b.x,dy=a.y-b.y,d=dx*dx+dy*dy;if(d<17000){cx.strokeStyle='rgba(70,64,111,'+(.16*(1-d/17000))+')';cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+        var mdx=a.x-mx,mdy=a.y-my,md=mdx*mdx+mdy*mdy;
+        if(md<26000){cx.strokeStyle='rgba(47,169,140,'+(.45*(1-md/26000))+')';cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(mx,my);cx.stroke()}
+        cx.fillStyle='rgba('+a.c+','+(md<26000?.9:.5)+')';cx.beginPath();cx.arc(a.x,a.y,a.r,0,6.283);cx.fill();
+      }
+      if(run&&!reduce)raf=requestAnimationFrame(draw);
+    }
+    size();draw();
+    addEventListener('resize',function(){size();if(reduce)draw()});
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+    hero.addEventListener('pointerleave',function(){mx=my=-999});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!run){run=true;draw()}else if(!v){run=false;cancelAnimationFrame(raf)}}).observe(hero);
+  })();
 
   var svc=document.getElementById('f-svc');
   document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){svc.value=a.dataset.pick})});
